@@ -1,8 +1,10 @@
 import express from 'express';
+const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
+app.use(cors())
 app.get('/api/v1/form/blocks', (req, res) => {
   res.json(
     [

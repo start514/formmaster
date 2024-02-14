@@ -4,8 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const cors = require('cors');
 const app = (0, express_1.default)();
-const port = 3000;
+const port = 5000;
+app.use(cors());
 app.get('/api/v1/form/blocks', (req, res) => {
     res.json([
         {
